@@ -1,8 +1,8 @@
 package Search;
-
-
-
-public class LinearSort {
+//  /////
+//    Временная сложность линейного поиска равна O(N). (Практически не используется)
+//  /////
+public class LinearSearch {
 
     public static void main(String[] args) {
         int index0 = linearSearch(new int[]{89, 57, 91, 47, 95, 3, 27, 22, 67, 99}, 89);
@@ -16,7 +16,7 @@ public class LinearSort {
         int index4 = linearSearch(new int[]{89, 57, 91, 47, 95, 3, 27, 22, 67, 99}, 95);
         print(95, index4);
     }
-    public static int linearSearch(int arr[], int elementToSearch) {
+    public static int linearSearch(int[] arr, int elementToSearch) {
 
         for (int index = 0; index < arr.length; index++) {
             if (arr[index] == elementToSearch)
