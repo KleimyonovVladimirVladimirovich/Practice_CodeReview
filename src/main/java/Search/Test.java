@@ -52,7 +52,7 @@ public class Test {
         }
     } */ //complete 2 (LinearSearch)
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
       int index = recursiveBinarySearch(new int[]{1,23,54,67,89,121,143,156,178,199,200},0,11,67);
       print(67,index);
     }
@@ -66,7 +66,7 @@ public class Test {
 
             if (array[mid] > elementToSearch)
                 return recursiveBinarySearch(array, firstElement, mid - 1, elementToSearch);
-
+            else
               return recursiveBinarySearch(array, mid+1, lastElement, elementToSearch);
 
             }
@@ -81,6 +81,6 @@ public class Test {
              System.out.println(elementToSearch + " is most of " + index);
          }
 
-    }
+    }*/ //binarySearch
 
 }
