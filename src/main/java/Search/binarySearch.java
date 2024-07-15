@@ -2,8 +2,9 @@ package Search;
 
 public class binarySearch {
     public static void main(String[] args) {
-        int index = recursiveBinarySearch(new int[]{89, 57, 91, 47, 95, 3, 27, 22, 67, 99},0,10, 27);
-        print(27, index);
+
+        int index = recursiveBinarySearch(new int[]{1,2,4,10,15,19,21,25,29,30,34,36,37,39,50,57,58,60,70},0,19, 50);
+        print(50, index);
     }
     public static int recursiveBinarySearch(int[] arr, int firstElement, int lastElement, int elementToSearch) {
 
