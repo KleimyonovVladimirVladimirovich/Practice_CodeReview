@@ -8,6 +8,8 @@ package Tree;
 ////**
 ////*
 
+import Stack.SimpleStack;
+
 //Рекурсивный метод бинарного дерева.
 public class BinaryTree {
 
@@ -22,7 +24,8 @@ public class BinaryTree {
                 new BinaryTree_Code(10, null,
                         new BinaryTree_Code(14, new BinaryTree_Code(13), null)));
 
-        System.out.println(root.sum());
+        System.out.println(root.recurse_sum());
+
     }
     static class BinaryTree_Code {
         int value;
@@ -39,17 +42,18 @@ public class BinaryTree {
             this.value = value;
         }
 
-        public int sum() {
+        public int recurse_sum() {
             int summ = value;
 
             if (left != null) {
-                summ += left.sum();
+                summ += left.recurse_sum();
             }
             if (right != null) {
-                summ += right.sum();
+                summ += right.recurse_sum();
             }
 
             return summ;
         }
+
     }
 }
