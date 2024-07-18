@@ -1,5 +1,6 @@
 package Tree;
 
+import Stack.SimpleQueue;
 import Stack.SimpleStack;
 
 public class IterBinaryTree {
@@ -15,7 +16,8 @@ public class IterBinaryTree {
                                         new tree(38),
                                         new tree(52))));
 
-        System.out.println(tree.sumDeep(root));
+       // System.out.println(tree.sumDeep(root));
+        System.out.println(tree.WideDeep(root) + " : Count value");
     }
     static class tree {
         int value;
@@ -31,7 +33,7 @@ public class IterBinaryTree {
         public tree(int value) {
             this.value = value;
         }
-        // Рекурсивный обход в глубину.
+        // Итеративный обход в глубину.
         public static int sumDeep(tree root) {
             SimpleStack<tree> stack = new SimpleStack<tree>();
             stack.push(root);
@@ -40,7 +42,9 @@ public class IterBinaryTree {
             while (!stack.isEmpty()) {
                 tree node = stack.pop();
                 System.out.println(node.value);
+
                 summ += node.value;
+
 
                 if (node.right != null) {
                     stack.push(node.right);
@@ -51,6 +55,33 @@ public class IterBinaryTree {
             }
 
             return summ;
+            // Итеративный обход в глубину.
         }
+        // Итеративный обход в ширину.
+        public static int WideDeep(tree root) {
+            SimpleQueue<tree> queue = new SimpleQueue<tree>();
+            queue.add(root);
+
+            int summ = 0;
+            while (!queue.isEmpty()) {
+                tree node = queue.remove();
+                System.out.println(node.value);
+
+                summ += node.value;
+
+
+                if (node.right != null) {
+                    queue.add(node.right);
+                }
+                if (node.left != null) {
+                    queue.add(node.left);
+                }
+
+            }
+
+            return summ;
+            // Итеративный обход в ширину.
+        }
+
     }
 }

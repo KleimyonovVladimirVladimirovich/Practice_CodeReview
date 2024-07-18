@@ -42,6 +42,7 @@ public class BinaryTree {
             this.value = value;
         }
 
+        //Рекурсивный метод
         public int recurse_sum() {
             int summ = value;
 

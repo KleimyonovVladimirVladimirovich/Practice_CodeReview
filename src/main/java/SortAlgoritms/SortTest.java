@@ -2,7 +2,7 @@ package SortAlgoritms;
 
 import java.util.Arrays;
 
-public class Sort {
+public class SortTest {
     //***
     //Fast Sort
     //***
