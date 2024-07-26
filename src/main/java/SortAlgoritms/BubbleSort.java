@@ -14,7 +14,6 @@ public class BubbleSort {
                     array[i] = array[i - 1];
                     array[i - 1] = temp;
                     isSorted = false;
-
                 }
             }
             System.out.println(Arrays.toString(array));
