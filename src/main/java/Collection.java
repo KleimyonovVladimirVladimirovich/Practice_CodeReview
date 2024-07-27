@@ -15,6 +15,38 @@ public class Collection {
         System.out.println(list);
         System.out.println(list.indexOf(2));
         System.out.println(list.indexOf(1));
+
+
+        //Стереть ниже
+        new Thread(() -> {
+
+        }
+        ).start();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        }
+        ).start();
+
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        });
+        MyThread myThread = new MyThread();
+        Thread thread1 = new Thread(myThread);
+        thread1.start();
+    }
+}
+class MyThread implements Runnable {
+
+    @Override
+    public void run() {
+
     }
 }
 

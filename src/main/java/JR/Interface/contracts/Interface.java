@@ -1,4 +1,4 @@
-package Interface.contracts;
+package JR.Interface.contracts;
 //ТАКАЯ РЕАЛИЗАЦИЯ будет выглядеть функциональной, когда в нем ОДИН нериализованный метод.
 @FunctionalInterface
 public interface Interface {

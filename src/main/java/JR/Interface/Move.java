@@ -1,6 +1,6 @@
-package Interface;
+package JR.Interface;
 
-import Interface.contracts.Interface;
+import JR.Interface.contracts.Interface;
 
 public class Move implements Interface {
 

@@ -1,7 +1,7 @@
-package Interface;
+package JR.Interface;
 
-import Interface.contracts.Interface;
-import Interface.contracts.Sellable;
+import JR.Interface.contracts.Interface;
+import JR.Interface.contracts.Sellable;
 
 import java.io.Serializable;
 

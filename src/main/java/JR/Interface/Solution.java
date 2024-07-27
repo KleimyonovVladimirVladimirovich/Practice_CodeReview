@@ -1,7 +1,8 @@
-package Interface;
+package JR.Interface;
 
-import Interface.contracts.Interface;
-import Interface.contracts.Stoppable;
+import JR.Interface.contracts.ImplWithStaticMethod;
+import JR.Interface.contracts.Interface;
+import JR.Interface.contracts.Stoppable;
 
 public class Solution{
 
@@ -25,6 +26,9 @@ public class Solution{
          Interface motorsycl = new Move();
          motorsycl.goStraight();
          //...
+
+
+        ImplWithStaticMethod.toCol();
     }
 }
 
