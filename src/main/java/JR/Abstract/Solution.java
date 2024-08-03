@@ -14,7 +14,17 @@ public class Solution {
             void func() {
                 System.out.println("Its cool!");
             }
-        }; //Анонимный класс (;)
+        }; //Анонимный класс (;)Анонимный
+
+        Abstract absTest = new Abstract("Abstract Class") {
+            @Override
+            void func() {
+
+            }
+        };
+        absTest.func();
+        System.out.println("Имя класса - " + absTest.getName());
+
 
         abs.func();
     }
@@ -34,10 +44,12 @@ abstract class Abstract {
         return name;
     }
 
+
     abstract void func();
 }
 //super - добраться до чего-то класса родителя
 class AbstractSon extends Abstract {
+
     public AbstractSon(String name) {
         super(name);
     }

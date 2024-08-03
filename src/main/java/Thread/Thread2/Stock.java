@@ -14,7 +14,7 @@ public class Stock {
             Task task = new Task();
             tasks.add(task);
             task.start();
-            System.out.println(Stock.fee);
+           // System.out.println(Stock.fee);
 
         }
         System.out.println("All started");
