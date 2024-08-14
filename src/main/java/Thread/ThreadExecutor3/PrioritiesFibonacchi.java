@@ -6,6 +6,7 @@ import java.util.Random;
 
 public class PrioritiesFibonacchi {
     public static void main(String[] args) throws InterruptedException {
+        System.out.println("\nProcess...");
         List<Thread> threadList = new ArrayList<>();
         for (int i = 0; i < 15; i++) {
             Thread thread = new Thread(PrioritiesFibonacchi::doLongTime);
@@ -24,7 +25,7 @@ public class PrioritiesFibonacchi {
         for (Thread thread: threadList) {
             thread.join();  //дожидаемся выполнения потоков, потом выводим остатки потока main снизу
         }
-        System.out.println("\nProcess...");
+
         System.out.println("\nMain is finished");
     }
 

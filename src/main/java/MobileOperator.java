@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class MobileOperator {
     public static void main(String[] args) {
 //        Scanner scanner = new Scanner(System.in);
@@ -28,6 +26,11 @@ public class MobileOperator {
 //            double cuts = Math.round(N / 2);
 //            System.out.println(cuts);
 //        }
+        System.out.println(fun());
 
+
+    }
+    public static int fun() {
+        return 40;
     }
 }

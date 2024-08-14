@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Stock {
-    public volatile static Integer fee = 0; //komissia
+    public /*volatile*/ static Integer fee = 0; //komissia
 
     public static final Object monitor = new Object(); //вот так всегда должен выглядеть мютабл (static final)
 
@@ -29,9 +29,9 @@ public class Stock {
 class Task extends Thread {
     public void run() {
         //Class<Stock> stockClass = Stock.class;
-        synchronized (Stock.monitor) { //Ждет объект монитора (не принимает примитивы)
+        //synchronized (Stock.monitor) { //Ждет объект монитора (не принимает примитивы)
             Stock.fee+=getOneFee();
-        }
+       // }
 
        // Stock.fee+=getOneFee(); //блок мьютабл
     }

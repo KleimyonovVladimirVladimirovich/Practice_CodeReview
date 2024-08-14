@@ -1,8 +1,6 @@
 package Thread.ThreadPoolExecutors4;
 
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.FutureTask;
+import java.util.concurrent.*;
 
 public class FutureTaskDemo {
 
@@ -27,9 +25,15 @@ public class FutureTaskDemo {
         futureTask.run();
 
         try {
-            System.out.println("Result: " + futureTask.get());
+            System.out.println("Result for FutureTask: " + futureTask.get());
         } catch (InterruptedException | ExecutionException e) {
             throw new RuntimeException(e);
         }
+        //ПРИМЕР FUTURE ЧЕРЕЗ ExecutorService
+        ExecutorService executorService = Executors.newCachedThreadPool();
+        Future<Integer> future = executorService.submit(callable);
+        System.out.println("Result for Future: " + future.get());
+        executorService.shutdown();
+
     }
 }
