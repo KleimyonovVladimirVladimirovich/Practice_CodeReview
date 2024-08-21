@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+//РЕФЛЕКСИЯ - Исследование класса
 
 public class Main {
     public static void main(String[] args) {
@@ -29,13 +30,16 @@ public class Main {
         System.out.println();
 
         System.out.println("РЕФЛЕКСИЯ ПО МЕТОДАМ");
-        Method[] declaredMethods = Person.class.getMethods(); //DeclaredMetods не лезит в родителя в отличие от getMetods (не выводит методы Object)
+        Method[] declaredMethods = Person.class.getDeclaredMethods(); //DeclaredMetods не лезит в родителя в отличие от getMetods (не выводит методы Object)
         List<Method> methodList = List.of(declaredMethods);
         for (Method method : methodList) {
             System.out.println(method);
         }
 
+        System.out.println();
         Method declaredMethod = declaredMethods[0];
+        System.out.println(declaredMethod.getParameterCount()); //getname
+        System.out.println(Arrays.toString(declaredMethod.getParameterTypes())); //getname
 
     }
 }
