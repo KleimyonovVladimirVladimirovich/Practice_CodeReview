@@ -6,7 +6,7 @@ import java.net.UnknownHostException;
 
 public class ExampleSocket {
     //HOSTS
-    static final String HOST_ONE = "youtube.com";
+    static final String HOST_ONE = "google.com";
     static final String HOST_TWO = "streamcraft.net";
 
     //PORT
@@ -41,8 +41,6 @@ public class ExampleSocket {
             socket.close();
 
 
-        } catch (UnknownHostException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

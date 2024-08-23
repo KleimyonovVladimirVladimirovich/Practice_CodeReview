@@ -8,7 +8,9 @@ package Tree;
 ////**
 ////*
 
-import Stack.SimpleStack;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Stack;
 
 //Рекурсивный метод бинарного дерева.
 public class BinaryTree {
@@ -24,7 +26,9 @@ public class BinaryTree {
                 new BinaryTree_Code(10, null,
                         new BinaryTree_Code(14, new BinaryTree_Code(13), null)));
 
+        BinaryTree_Code root1 = null;
         System.out.println(root.recurse_sum());
+        System.out.println(BinaryTree_Code.preorderTraversal144(root1)); //пример пустого дерева
 
     }
     static class BinaryTree_Code {
@@ -54,6 +58,28 @@ public class BinaryTree {
             }
 
             return summ;
+        }
+
+        public static List<Integer> preorderTraversal144(BinaryTree_Code root1) {
+            Stack<BinaryTree_Code> stack = new Stack<>();
+            List<Integer> output = new LinkedList<>();
+            if (root1 == null) {
+                return output;
+            }
+
+            stack.push(root1);
+            while(!stack.isEmpty()) {
+                BinaryTree_Code Node = stack.pop();
+                output.add(Node.value);
+                if (Node.left != null) {
+                    stack.push(Node.left);
+                }
+                if (Node.right != null) {
+                    stack.push(Node.right);
+                }
+            }
+
+            return output;
         }
 
     }
